@@ -90,12 +90,12 @@
   top: 0;
   left: 0;
   z-index: 100;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #fff;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 0 32px rgba(255, 255, 255, 0.75), inset 0 0 14px rgba(255, 255, 255, 0.4);
+  background: #fff;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.8);
   opacity: 0;
   pointer-events: none;
   transition: opacity 120ms ease;
