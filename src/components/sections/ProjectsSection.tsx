@@ -36,14 +36,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
     ? FEATURED_PROJECTS
     : FEATURED_PROJECTS.filter(p => p.category === activeCategory);
 
-  const getProjectIcon = (name: string) => {
+  const getProjectIcon = (name: string, size = 'w-5 h-5') => {
     switch (name) {
-      case 'Wallet': return <Wallet className="w-5 h-5 text-emerald-400" />;
-      case 'TrendingUp': return <TrendingUp className="w-5 h-5 text-cyan-400" />;
-      case 'Compass': return <Compass className="w-5 h-5 text-cosmic-lavender" />;
-      case 'CreditCard': return <CreditCard className="w-5 h-5 text-amber-400" />;
-      case 'Bell': return <Bell className="w-5 h-5 text-rose-400" />;
-      default: return <Layers className="w-5 h-5 text-cosmic-lavender" />;
+      case 'Wallet': return <Wallet className={`${size} text-emerald-400`} />;
+      case 'TrendingUp': return <TrendingUp className={`${size} text-cyan-400`} />;
+      case 'Compass': return <Compass className={`${size} text-cosmic-lavender`} />;
+      case 'CreditCard': return <CreditCard className={`${size} text-amber-400`} />;
+      case 'Bell': return <Bell className={`${size} text-rose-400`} />;
+      default: return <Layers className={`${size} text-cosmic-lavender`} />;
     }
   };
 
@@ -96,9 +96,22 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
             >
               {/* Top Graphic Card Preview Banner */}
               <div className="relative h-48 sm:h-56 w-full bg-gradient-to-br from-cosmic-card via-purple-950/20 to-black p-6 flex flex-col justify-between overflow-hidden border-b border-white/5">
+                <img
+                  src={`${import.meta.env.BASE_URL}${project.previewImage}`}
+                  alt={`${project.title} project preview`}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-50 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20 pointer-events-none" />
                 {/* Visual Ambient Grid / Pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
                 <div className="absolute -top-12 -right-12 w-40 h-40 bg-cosmic-lavender/10 rounded-full blur-2xl pointer-events-none group-hover:bg-cosmic-lavender/20 transition-all duration-500" />
+                <div className="absolute right-8 top-1/2 -translate-y-1/2 w-36 h-36 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                  <div className="absolute inset-3 rounded-full border border-cosmic-lavender/20" />
+                  <div className="absolute inset-6 rounded-full border border-white/10" />
+                  {getProjectIcon(project.iconName, 'w-16 h-16')}
+                </div>
 
                 {/* Top Badge Row */}
                 <div className="relative z-10 flex items-center justify-between">
@@ -123,12 +136,15 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                 </div>
 
                 {/* Central Title Display */}
-                <div className="relative z-10">
+                <div className="relative z-10 max-w-[75%]">
                   <span className="text-[10px] font-mono tracking-widest uppercase text-cosmic-lavender/80">
                     Project 0{idx + 1}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-cosmic-lavender transition-colors">
-                    {project.title}
+                  <h3 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-white group-hover:text-cosmic-lavender transition-colors">
+                    <span className="w-10 h-10 shrink-0 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center">
+                      {getProjectIcon(project.iconName, 'w-6 h-6')}
+                    </span>
+                    <span>{project.title}</span>
                   </h3>
                   <p className="text-xs text-gray-400 mt-1 line-clamp-1">
                     {project.tagline}

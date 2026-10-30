@@ -15,6 +15,7 @@ export interface Project {
   status: 'Live & Production' | 'Live Foundation' | 'Architecture & Planning' | 'Completed Academic PBL';
   verifiedNote: string;
   iconName: string;
+  previewImage: string;
 }
 
 export interface SkillItem {

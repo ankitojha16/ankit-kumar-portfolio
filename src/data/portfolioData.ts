@@ -47,7 +47,8 @@ export const FEATURED_PROJECTS: Project[] = [
     liveUrl: 'https://wealthtrack-gamma.vercel.app/',
     status: 'Live & Production',
     verifiedNote: 'Fully deployed and functional offline-first PWA with IndexedDB local storage.',
-    iconName: 'Wallet'
+    iconName: 'Wallet',
+    previewImage: 'projects/wealthtrack.svg'
   },
   {
     id: 'wealthlens',
@@ -71,7 +72,8 @@ export const FEATURED_PROJECTS: Project[] = [
     liveUrl: 'https://wealthlens-inky.vercel.app/',
     status: 'Live Foundation',
     verifiedNote: 'Live deployment showcasing UI architecture, financial data views, and Supabase integration.',
-    iconName: 'TrendingUp'
+    iconName: 'TrendingUp',
+    previewImage: 'projects/wealthlens.svg'
   },
   {
     id: 'wealthcompass',
@@ -94,7 +96,8 @@ export const FEATURED_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/ankitojha16/wealthcompas',
     status: 'Architecture & Planning',
     verifiedNote: 'Active architectural design and data-modeling phase; public repository is in development.',
-    iconName: 'Compass'
+    iconName: 'Compass',
+    previewImage: 'projects/wealthcompass.svg'
   },
   {
     id: 'atm-management',
@@ -116,7 +119,8 @@ export const FEATURED_PROJECTS: Project[] = [
     myContribution: 'Wrote the core transactional state logic, balance validation rules, file I/O persistence routines, and interactive terminal interface.',
     status: 'Completed Academic PBL',
     verifiedNote: 'Academic Project-Based Learning system implementing all standard ATM banking operations.',
-    iconName: 'CreditCard'
+    iconName: 'CreditCard',
+    previewImage: 'projects/atm-management.svg'
   },
   {
     id: 'smartreminder',
@@ -139,7 +143,8 @@ export const FEATURED_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/ankitojha16/SmartReminder',
     status: 'Completed Academic PBL',
     verifiedNote: 'Functional productivity reminder system with priority filtering and deadline tracking.',
-    iconName: 'Bell'
+    iconName: 'Bell',
+    previewImage: 'projects/smartreminder.svg'
   }
 ];
 

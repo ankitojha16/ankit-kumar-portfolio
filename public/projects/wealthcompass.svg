@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="20" y1="20" x2="970" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#241441"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
+  </defs>
+  <rect width="1000" height="500" rx="32" fill="url(#bg)"/>
+  <circle cx="850" cy="70" r="220" fill="#a78bfa" fill-opacity=".09"/>
+  <rect x="520" y="58" width="410" height="382" rx="24" fill="#151329" stroke="#a78bfa" stroke-opacity=".24"/>
+  <rect x="550" y="88" width="145" height="13" rx="6.5" fill="#ede9fe" fill-opacity=".75"/>
+  <rect x="550" y="114" width="110" height="9" rx="4.5" fill="#c4b5fd" fill-opacity=".35"/>
+  <circle cx="725" cy="250" r="100" stroke="#ffffff" stroke-opacity=".08" stroke-width="32"/>
+  <path d="M725 150A100 100 0 0 1 816 209" stroke="#a78bfa" stroke-width="32" stroke-linecap="round"/>
+  <path d="M816 209A100 100 0 0 1 773 337" stroke="#38bdf8" stroke-width="32" stroke-linecap="round"/>
+  <path d="M773 337A100 100 0 0 1 635 279" stroke="#34d399" stroke-width="32" stroke-linecap="round"/>
+  <circle cx="725" cy="250" r="54" fill="#151329"/>
+  <rect x="550" y="378" width="340" height="13" rx="6.5" fill="#a78bfa" fill-opacity=".18"/>
+  <rect x="550" y="378" width="235" height="13" rx="6.5" fill="#a78bfa" fill-opacity=".68"/>
+  <text x="66" y="168" fill="#c4b5fd" font-family="Arial,sans-serif" font-size="24" letter-spacing="5">WEALTH PLANNING</text>
+  <text x="62" y="238" fill="#f5f3ff" font-family="Arial,sans-serif" font-size="64" font-weight="700">WealthCompass</text>
+  <text x="66" y="284" fill="#d1d5db" font-family="Arial,sans-serif" font-size="25">One view of your complete financial picture</text>
+  <rect x="66" y="324" width="182" height="44" rx="22" fill="#7c3aed" fill-opacity=".2" stroke="#a78bfa" stroke-opacity=".45"/>
+  <text x="92" y="352" fill="#ddd6fe" font-family="Arial,sans-serif" font-size="18">WEALTH PLANNER</text>
+</svg>
