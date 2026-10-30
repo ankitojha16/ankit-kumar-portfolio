@@ -13,6 +13,7 @@ import { ResumeSection } from './components/sections/ResumeSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { ProjectModal } from './components/ui/ProjectModal';
 import { ResumeModal } from './components/ui/ResumeModal';
+import { CursorFollower } from './components/ui/CursorFollower';
 import { Project } from './types';
 
 export const App: React.FC = () => {
@@ -23,6 +24,7 @@ export const App: React.FC = () => {
     <div className="relative min-h-screen bg-cosmic-void text-cosmic-text overflow-x-hidden selection:bg-cosmic-lavender selection:text-black">
       {/* Interactive 3D Cosmic WebGL / Canvas Background */}
       <CosmicCanvas />
+      <CursorFollower />
 
       {/* Main Floating Header Navbar */}
       <Navbar onOpenResume={() => setIsResumeOpen(true)} />

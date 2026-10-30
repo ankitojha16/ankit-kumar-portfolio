@@ -17,6 +17,17 @@ export interface GithubProfile {
   html_url: string;
 }
 
+export interface GithubContribution {
+  date: string;
+  count: number;
+  level: number;
+}
+
+export interface GithubContributions {
+  total: number;
+  contributions: GithubContribution[];
+}
+
 const FALLBACK_REPOS: GithubRepo[] = [
   {
     name: 'wealthtrack',
@@ -55,6 +66,52 @@ const FALLBACK_REPOS: GithubRepo[] = [
     updated_at: '2024-12-19T18:10:00Z'
   }
 ];
+
+export async function fetchGithubContributions(): Promise<GithubContributions> {
+  const response = await fetch('https://github-contributions-api.jogruber.de/v4/ankitojha16?y=last', {
+    headers: { Accept: 'application/json' }
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub contributions request failed (${response.status})`);
+  }
+
+  const result: unknown = await response.json();
+  if (
+    typeof result !== 'object' ||
+    result === null ||
+    !('total' in result) ||
+    typeof result.total !== 'object' ||
+    result.total === null ||
+    !('lastYear' in result.total) ||
+    typeof result.total.lastYear !== 'number' ||
+    !('contributions' in result) ||
+    !Array.isArray(result.contributions)
+  ) {
+    throw new Error('GitHub contributions response had an unexpected format');
+  }
+
+  const contributions = result.contributions.filter(
+    (contribution): contribution is GithubContribution =>
+      typeof contribution === 'object' &&
+      contribution !== null &&
+      'date' in contribution &&
+      typeof contribution.date === 'string' &&
+      'count' in contribution &&
+      typeof contribution.count === 'number' &&
+      'level' in contribution &&
+      typeof contribution.level === 'number'
+  );
+
+  if (contributions.length === 0) {
+    throw new Error('GitHub contributions response contained no valid daily data');
+  }
+
+  return {
+    total: result.total.lastYear,
+    contributions
+  };
+}
 
 export async function fetchGithubData(): Promise<{
   profile: GithubProfile;

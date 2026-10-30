@@ -10,7 +10,7 @@ import {
   Activity 
 } from 'lucide-react';
 import { GithubIcon } from '../ui/Icons';
-import { fetchGithubData, GithubProfile, GithubRepo } from '../../data/githubService';
+import { fetchGithubContributions, fetchGithubData, GithubContributions, GithubProfile, GithubRepo } from '../../data/githubService';
 import { sound } from '../layout/SoundEffects';
 
 export const GithubSection: React.FC = () => {
@@ -18,6 +18,8 @@ export const GithubSection: React.FC = () => {
   const [repos, setRepos] = useState<GithubRepo[]>([]);
   const [isLive, setIsLive] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const [contributions, setContributions] = useState<GithubContributions | null>(null);
+  const [contributionsLoading, setContributionsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -29,8 +31,29 @@ export const GithubSection: React.FC = () => {
         setLoading(false);
       }
     });
+
+    const loadContributions = async () => {
+      try {
+        const data = await fetchGithubContributions();
+        if (isMounted) {
+          setContributions(data);
+          setContributionsLoading(false);
+        }
+      } catch (error) {
+        console.warn('Unable to load live GitHub contributions:', error);
+        if (isMounted) {
+          setContributions(null);
+          setContributionsLoading(false);
+        }
+      }
+    };
+
+    loadContributions();
+    const refreshInterval = window.setInterval(loadContributions, 15 * 60 * 1000);
+
     return () => {
       isMounted = false;
+      window.clearInterval(refreshInterval);
     };
   }, []);
 
@@ -55,6 +78,76 @@ export const GithubSection: React.FC = () => {
             <span>{isLive ? 'Live GitHub REST API Connected' : 'Public Repository Registry'}</span>
           </div>
           <div className="w-16 h-1 bg-gradient-to-r from-cosmic-lavender to-cosmic-neon rounded-full" />
+        </div>
+
+        {/* Live contribution graph */}
+        <div className="glass-card rounded-3xl p-5 sm:p-8 mb-10 border border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
+            <div>
+              <h3 className="text-lg font-bold text-white">Contribution activity</h3>
+              <p className="text-xs text-gray-400 mt-1">Daily public GitHub contributions over the last year</p>
+            </div>
+            {contributions && (
+              <p className="text-sm font-mono text-cosmic-lavender">
+                <span className="font-bold text-white">{contributions.total}</span> contributions in the last year
+              </p>
+            )}
+          </div>
+
+          {contributionsLoading ? (
+            <p className="text-sm text-gray-400 py-8 text-center" role="status">Loading live contribution activity…</p>
+          ) : contributions ? (
+            <div className="overflow-x-auto pb-2" aria-label="GitHub contribution activity calendar">
+              <div className="min-w-[700px]">
+                <div className="grid grid-rows-7 grid-flow-col auto-cols-[11px] gap-1">
+                  {contributions.contributions.map((contribution) => (
+                    <span
+                      key={contribution.date}
+                      title={`${contribution.count} contribution${contribution.count === 1 ? '' : 's'} on ${contribution.date}`}
+                      aria-label={`${contribution.count} contribution${contribution.count === 1 ? '' : 's'} on ${contribution.date}`}
+                      className={`w-[11px] h-[11px] rounded-[3px] border border-white/5 ${
+                        contribution.level === 0
+                          ? 'bg-white/5'
+                          : contribution.level === 1
+                            ? 'bg-purple-950'
+                            : contribution.level === 2
+                              ? 'bg-purple-800'
+                              : contribution.level === 3
+                                ? 'bg-purple-600'
+                                : 'bg-cosmic-lavender'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm text-gray-400 py-8 text-center" role="status">
+              Live contribution activity is temporarily unavailable.{' '}
+              <a
+                href="https://github.com/ankitojha16"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cosmic-lavender hover:text-white underline underline-offset-4"
+              >
+                View the GitHub profile
+              </a>
+            </p>
+          )}
+
+          {contributions && (
+            <div className="flex items-center justify-between mt-4 text-[10px] font-mono text-gray-500">
+              <span>Less</span>
+              <div className="flex items-center gap-1" aria-hidden="true">
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-white/5" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-purple-950" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-purple-800" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-purple-600" />
+                <span className="w-2.5 h-2.5 rounded-[2px] bg-cosmic-lavender" />
+              </div>
+              <span>More</span>
+            </div>
+          )}
         </div>
 
         {/* Profile Stats Overview Bento */}
