@@ -19,9 +19,4 @@
   <rect x="601" y="340" width="190" height="9" rx="4.5" fill="#fef3c7" fill-opacity=".55"/>
   <circle cx="580" cy="378" r="8" fill="#f59e0b" fill-opacity=".7"/>
   <rect x="601" y="373" width="152" height="9" rx="4.5" fill="#fef3c7" fill-opacity=".35"/>
-  <text x="66" y="168" fill="#fde68a" font-family="Arial,sans-serif" font-size="24" letter-spacing="5">ACADEMIC SYSTEMS</text>
-  <text x="62" y="238" fill="#fffbeb" font-family="Arial,sans-serif" font-size="68" font-weight="700">ATM Management</text>
-  <text x="66" y="284" fill="#d1d5db" font-family="Arial,sans-serif" font-size="25">Banking ledger and transaction workflows</text>
-  <rect x="66" y="324" width="190" height="44" rx="22" fill="#b45309" fill-opacity=".25" stroke="#fbbf24" stroke-opacity=".45"/>
-  <text x="91" y="352" fill="#fde68a" font-family="Arial,sans-serif" font-size="18">C / C++ PROJECT</text>
 </svg>

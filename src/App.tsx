@@ -7,7 +7,6 @@ import { AboutSection } from './components/sections/AboutSection';
 import { SkillsSection } from './components/sections/SkillsSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { EducationSection } from './components/sections/EducationSection';
-import { JourneySection } from './components/sections/JourneySection';
 import { GithubSection } from './components/sections/GithubSection';
 import { ResumeSection } from './components/sections/ResumeSection';
 import { ContactSection } from './components/sections/ContactSection';
@@ -36,7 +35,6 @@ export const App: React.FC = () => {
         <SkillsSection />
         <ProjectsSection onSelectProject={(project) => setSelectedProject(project)} />
         <EducationSection />
-        <JourneySection />
         <GithubSection />
         <ResumeSection onOpenResume={() => setIsResumeOpen(true)} />
         <ContactSection />

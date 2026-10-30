@@ -101,9 +101,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                   alt={`${project.title} project preview`}
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-50 transition-opacity duration-500"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/25 pointer-events-none" />
                 {/* Visual Ambient Grid / Pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
                 <div className="absolute -top-12 -right-12 w-40 h-40 bg-cosmic-lavender/10 rounded-full blur-2xl pointer-events-none group-hover:bg-cosmic-lavender/20 transition-all duration-500" />

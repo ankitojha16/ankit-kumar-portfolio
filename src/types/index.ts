@@ -43,15 +43,6 @@ export interface EducationMilestone {
   focusAreas: string[];
 }
 
-export interface JourneyMilestone {
-  step: string;
-  period: string;
-  title: string;
-  narrative: string;
-  milestones: string[];
-  techTags: string[];
-}
-
 export interface ContactFormData {
   name: string;
   email: string;

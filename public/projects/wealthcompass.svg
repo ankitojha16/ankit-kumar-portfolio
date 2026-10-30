@@ -14,9 +14,4 @@
   <circle cx="725" cy="250" r="54" fill="#151329"/>
   <rect x="550" y="378" width="340" height="13" rx="6.5" fill="#a78bfa" fill-opacity=".18"/>
   <rect x="550" y="378" width="235" height="13" rx="6.5" fill="#a78bfa" fill-opacity=".68"/>
-  <text x="66" y="168" fill="#c4b5fd" font-family="Arial,sans-serif" font-size="24" letter-spacing="5">WEALTH PLANNING</text>
-  <text x="62" y="238" fill="#f5f3ff" font-family="Arial,sans-serif" font-size="64" font-weight="700">WealthCompass</text>
-  <text x="66" y="284" fill="#d1d5db" font-family="Arial,sans-serif" font-size="25">One view of your complete financial picture</text>
-  <rect x="66" y="324" width="182" height="44" rx="22" fill="#7c3aed" fill-opacity=".2" stroke="#a78bfa" stroke-opacity=".45"/>
-  <text x="92" y="352" fill="#ddd6fe" font-family="Arial,sans-serif" font-size="18">WEALTH PLANNER</text>
 </svg>

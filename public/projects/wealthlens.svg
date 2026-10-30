@@ -20,9 +20,4 @@
   <rect x="536" y="239" width="368" height="176" rx="14" fill="#ffffff" fill-opacity=".035"/>
   <path d="M558 373L601 342L641 356L684 298L724 316L770 270L811 291L879 253" stroke="url(#line)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="770" cy="270" r="7" fill="#67e8f9"/>
-  <text x="66" y="168" fill="#a5f3fc" font-family="Arial,sans-serif" font-size="24" letter-spacing="5">FINANCIAL INSIGHTS</text>
-  <text x="62" y="238" fill="#ecfeff" font-family="Arial,sans-serif" font-size="68" font-weight="700">WealthLens</text>
-  <text x="66" y="284" fill="#d1d5db" font-family="Arial,sans-serif" font-size="25">Company research and market analytics</text>
-  <rect x="66" y="324" width="160" height="44" rx="22" fill="#0891b2" fill-opacity=".2" stroke="#22d3ee" stroke-opacity=".45"/>
-  <text x="92" y="352" fill="#a5f3fc" font-family="Arial,sans-serif" font-size="18">MARKET DATA</text>
 </svg>

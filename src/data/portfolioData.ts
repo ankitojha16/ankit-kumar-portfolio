@@ -1,4 +1,4 @@
-import { Project, SkillCategory, EducationMilestone, JourneyMilestone } from '../types';
+import { Project, SkillCategory, EducationMilestone } from '../types';
 
 export const PERSONAL_INFO = {
   name: 'Ankit Kumar',
@@ -270,68 +270,5 @@ export const EDUCATION_LIST: EducationMilestone[] = [
       'Active participant in school academic and science competitions.'
     ],
     focusAreas: ['Mathematics', 'Science', 'Information Technology Foundations']
-  }
-];
-
-export const JOURNEY_STEPS: JourneyMilestone[] = [
-  {
-    step: 'Phase 01',
-    period: 'Early Foundations',
-    title: 'Programming Foundations in C & C++',
-    narrative: 'Began the software engineering path by tackling low-level memory concepts, data types, procedural control flows, and object-oriented architectures through C and C++.',
-    milestones: [
-      'Mastered pointers, memory structures, and algorithmic loops',
-      'Engineered console-based systems including the ATM Management Project',
-      'Developed disciplined debugging habits and logical clarity'
-    ],
-    techTags: ['C', 'C++', 'Data Structures', 'Console State']
-  },
-  {
-    step: 'Phase 02',
-    period: 'Web Discovery',
-    title: 'Web Standards & Modern JavaScript',
-    narrative: 'Transitioned to web platforms, diving deep into semantic HTML5, modern CSS responsive layouts (Flexbox, Grid), and asynchronous JavaScript ES6+.',
-    milestones: [
-      'Built interactive DOM-driven web interfaces from scratch',
-      'Mastered async/await, fetch APIs, and client-side event loops',
-      'Created utility tools and interactive task managers like SmartReminder'
-    ],
-    techTags: ['HTML5', 'CSS3', 'JavaScript ES6+', 'DOM API']
-  },
-  {
-    step: 'Phase 03',
-    period: 'Modern Frontend',
-    title: 'Component Architecture with React & TypeScript',
-    narrative: 'Adopted React and TypeScript to craft type-safe, modular, and maintainable user experiences with reusable component patterns and Tailwind CSS.',
-    milestones: [
-      'Implemented declarative reactive UIs with strict TypeScript interfaces',
-      'Leveraged Next.js App Router for optimized modern web applications',
-      'Crafted custom design systems using utility-first Tailwind CSS'
-    ],
-    techTags: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS']
-  },
-  {
-    step: 'Phase 04',
-    period: 'Data & Offline Systems',
-    title: 'Offline-First Architectures & Client Storage',
-    narrative: 'Explored client data persistence and Progressive Web Apps (PWAs). Realized that privacy and instant speed are achieved by keeping user data on their own device.',
-    milestones: [
-      'Architected WealthTrack using browser IndexedDB with zero cloud dependency',
-      'Configured Service Workers and PWA manifests for seamless installability',
-      'Engineered transactional category aggregation and budgeting logic'
-    ],
-    techTags: ['IndexedDB', 'PWA', 'Service Workers', 'WealthTrack']
-  },
-  {
-    step: 'Phase 05',
-    period: 'Current & Horizon',
-    title: 'FinTech Engineering & Full-Stack Expansion',
-    narrative: 'Bridging financial domain research with full-stack software development. Integrating Supabase backends, financial market data models, and preparing for professional software engineering internships.',
-    milestones: [
-      'Developing WealthLens for structured company financial insights',
-      'Designing WealthCompass architecture for unified net-worth tracking',
-      'Pursuing BCA at Graphic Era Deemed to be University (Graduation 2028)'
-    ],
-    techTags: ['Supabase', 'Node.js', 'FinTech Analytics', 'WealthLens']
   }
 ];
