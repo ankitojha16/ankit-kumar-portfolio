@@ -42,7 +42,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
 
         {/* Hero Visual Monogram / Orbit Avatar */}
         <div className="relative mb-6">
-          <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full p-[2px] bg-gradient-to-b from-cosmic-lavender via-cosmic-neon/50 to-transparent shadow-glow-md">
+          <div className="mobile-photo sm:hidden w-28 h-28 rounded-full overflow-hidden p-[2px] bg-gradient-to-b from-cosmic-lavender via-cosmic-neon/50 to-transparent shadow-glow-md">
+            <img
+              src="https://github.com/ankitojha16.png"
+              alt={PERSONAL_INFO.name}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-full rounded-full object-cover"
+            />
+          </div>
+
+          <div className="relative hidden sm:block w-36 h-36 rounded-full p-[2px] bg-gradient-to-b from-cosmic-lavender via-cosmic-neon/50 to-transparent shadow-glow-md">
             <div className="w-full h-full rounded-full bg-cosmic-dark flex flex-col items-center justify-center relative overflow-hidden group">
               {/* Inner subtle cosmic grid */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/40 via-transparent to-transparent opacity-80" />
