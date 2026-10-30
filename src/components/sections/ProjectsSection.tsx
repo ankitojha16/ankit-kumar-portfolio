@@ -93,6 +93,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
             <div
               key={project.id}
               className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-white/10 hover:border-cosmic-lavender/40 transition-all duration-300 relative"
+              style={{
+                animation: 'project-card-enter 0.2s ease-out both',
+                animationDelay: `${idx * 0.05}s`
+              }}
             >
               {/* Top Graphic Card Preview Banner */}
               <div className="relative h-48 sm:h-56 w-full bg-gradient-to-br from-cosmic-card via-purple-950/20 to-black p-6 flex flex-col justify-between overflow-hidden border-b border-white/5">

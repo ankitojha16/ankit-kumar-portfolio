@@ -14,11 +14,12 @@ export const CursorFollower: React.FC = () => {
     let animationFrame = 0;
     let previousFrameTime = 0;
     let isAnimating = false;
+    const followDuration = 200;
 
     const animate = (time: number) => {
       const elapsed = previousFrameTime ? Math.min(time - previousFrameTime, 32) : 16;
       previousFrameTime = time;
-      const followAmount = 1 - Math.exp(-elapsed / 85);
+      const followAmount = 1 - Math.exp(-elapsed / followDuration);
 
       currentX += (targetX - currentX) * followAmount;
       currentY += (targetY - currentY) * followAmount;
