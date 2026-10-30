@@ -83,11 +83,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               }}
               className="flex items-center gap-2 group cursor-pointer"
             >
-              <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-900/60 to-cosmic-neon/30 border border-cosmic-lavender/40 flex items-center justify-center transition-transform group-hover:scale-105 group-hover:border-cosmic-lavender">
-                <span className="font-mono text-sm font-bold text-cosmic-lavender tracking-tighter">
-                  AK
-                </span>
-              </div>
+              <img
+                src={`${import.meta.env.BASE_URL}ankit-kumar-portrait.png`}
+                alt="Ankit Kumar"
+                className="w-9 h-9 rounded-full border border-cosmic-lavender/40 object-cover transition-transform group-hover:scale-105 group-hover:border-cosmic-lavender"
+              />
               <div className="hidden sm:flex flex-col">
                 <span className="text-sm font-semibold tracking-wide text-white group-hover:text-cosmic-lavender transition-colors">
                   Ankit Kumar

@@ -98,7 +98,7 @@
   box-shadow: 0 0 24px rgba(255, 255, 255, 0.8);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 120ms ease;
+  transition: transform 70ms ease-out, opacity 120ms ease;
   will-change: transform;
 }
 
