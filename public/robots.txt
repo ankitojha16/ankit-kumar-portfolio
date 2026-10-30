@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ankitojha16.github.io/ankit-kumar-portfolio/sitemap.xml
