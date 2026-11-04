@@ -1,17 +1,41 @@
-# Ankit Kumar Portfolio
+# Ankit Kumar - Portfolio
 
-Personal portfolio built with React, TypeScript, and Vite.
+A personal portfolio showcasing my work and interests in full-stack development and financial technology.
 
-## Development
+**Live site:** [ankitojha16.github.io/ankit-kumar-portfolio](https://ankitojha16.github.io/ankit-kumar-portfolio/)
+
+## What's inside
+
+- Responsive portfolio with About, Skills, Projects, Education, GitHub activity, Resume, and Contact sections
+- Interactive cosmic canvas background and project and resume modals
+- Project details, including WealthTrack, WealthLens, WealthCompass, and SmartReminder
+- GitHub profile and repository activity
+
+## Built with
+
+React 18, TypeScript, Vite, Tailwind CSS, and Lucide icons.
+
+## Run locally
+
+Requires Node.js 20 or later.
 
 ```sh
 npm ci
 npm run dev
 ```
 
+Create and preview a production build:
+
+```sh
+npm run build
+npm run preview
+```
+
 ## Deployment
 
-The `main` branch is deployed to GitHub Pages by `.github/workflows/deploy.yml`.
-The site is published at <https://ankitojha16.github.io/ankit-kumar-portfolio/>.
+Pushing to `main` triggers the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the site and deploys `dist/` to GitHub Pages. You can also deploy manually by publishing the generated `dist/` directory.
 
-To deploy manually, run `npm run build` and publish the generated `dist/` directory.
+## Links
+
+- [GitHub](https://github.com/ankitojha16)
+- [LinkedIn](https://www.linkedin.com/in/ankitojha16)
