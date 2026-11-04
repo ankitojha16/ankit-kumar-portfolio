@@ -17,7 +17,7 @@ React 18, TypeScript, Vite, Tailwind CSS, and Lucide icons.
 
 ## Run locally
 
-Requires Node.js 20 or later.
+Use Node.js 20 or later, matching the version used by the deployment workflow.
 
 ```sh
 npm ci
